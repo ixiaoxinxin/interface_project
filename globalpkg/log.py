@@ -6,7 +6,7 @@ import threading
 import configparser
 
 
-class LogSignleton(object):
+class LogSignleton(object):#别的模块会用这个类名作为参数去掉用，实现单例模式
     """
     实现日志打印类
     __new__构造函数，实例创建之前被调用，返回该实例，是静态方法
