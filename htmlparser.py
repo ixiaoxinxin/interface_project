@@ -3,14 +3,14 @@
 
 __author__ = 'shouke'
 
-from html.parser import HTMLParser
-from html.entities import name2codepoint
-
+import HTMLParser
+from htmlentitydefs import name2codepoint
 from globalpkg.log import logger
+
 
 class MyHTMLParser(HTMLParser):
     def __init__(self, strict):
-        super().__init__(strict)
+        super.__init__(strict)
         self.start_tag = ''
         self.starttag_arrts = []
         self.starttag_data = []

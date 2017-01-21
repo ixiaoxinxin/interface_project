@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-
-
-__author__ = 'shouke'
 import logging
 from logging.handlers import RotatingFileHandler
 import threading
 import configparser
 
+
 class LogSignleton(object):
+    """
+    实现日志打印类
+    __new__构造函数，实例创建之前被调用，返回该实例，是静态方法
+    """
     def __init__(self, log_config):
         pass
 
