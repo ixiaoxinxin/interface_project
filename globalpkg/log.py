@@ -31,9 +31,9 @@ class LogSignleton(object):
             cls.instance.console_log_on = int(config.get('LOGGING', 'console_log_on'))
             cls.instance.logfile_log_on = int(config.get('LOGGING', 'logfile_log_on'))
             cls.instance.logger = logging.getLogger(cls.instance.logger_name)
-            cls.instance.__config_logger()
+            cls.instance.__config_logger() #相当于__classname__config_logger
         mutex.release()
-        return cls.instance
+        return cls.instance #有实例变量的这个特性
 
     def get_logger(self):
         return  self.logger
