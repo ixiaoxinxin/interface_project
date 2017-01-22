@@ -1,16 +1,14 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
+
+
+__author__ = 'shouke'
 import logging
 from logging.handlers import RotatingFileHandler
 import threading
 import configparser
 
-
-class LogSignleton(object):#别的模块会用这个类名作为参数去掉用，实现单例模式
-    """
-    实现日志打印类
-    __new__构造函数，实例创建之前被调用，返回该实例，是静态方法
-    """
+class LogSignleton(object):
     def __init__(self, log_config):
         pass
 
@@ -31,9 +29,9 @@ class LogSignleton(object):#别的模块会用这个类名作为参数去掉用�
             cls.instance.console_log_on = int(config.get('LOGGING', 'console_log_on'))
             cls.instance.logfile_log_on = int(config.get('LOGGING', 'logfile_log_on'))
             cls.instance.logger = logging.getLogger(cls.instance.logger_name)
-            cls.instance.__config_logger() #相当于__classname__config_logger
+            cls.instance.__config_logger()
         mutex.release()
-        return cls.instance #有实例变量的这个特性
+        return cls.instance
 
     def get_logger(self):
         return  self.logger

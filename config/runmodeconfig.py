@@ -1,16 +1,13 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-import configparser
+
+__author__ = 'shouke'
+
+import  configparser
 from globalpkg.log import logger
 
 
 class RunModeConfig:
-    """
-    日志配置类 configparser
-    配置文件的格式是： []包含的叫section,section 下有option=value这样的键值
-    如果section下有多个键值对，调用的写法：self.projects = config['PROJECTS']['projects']
-    自带自省功能
-    """
     def __init__(self, run_mode_conf):
         config = configparser.ConfigParser()
 
@@ -45,12 +42,8 @@ class RunModeConfig:
     def get_testsuits(self):
         return self.testsuites
 
-    #新增
-    def get_testcases(self):
-        return self.get_testsuits()
-
-    # def get_testcases_id_list(self):
-    #     return self.testcases_id_list
+    def get_testcases_id_list(self):
+        return self.testcases_id_list
 
 
 

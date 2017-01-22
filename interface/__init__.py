@@ -1,4 +1,3 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-
-__author__ = 'shouke'
+#本包中可编写具体的测试信息

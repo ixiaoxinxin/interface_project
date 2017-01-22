@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-
-__author__ = 'shouke'
-
 import os
+
 
 class OtherTools:
     def __init__(self):

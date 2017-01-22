@@ -6,7 +6,16 @@ __author__ = 'shouke'
 import unittest
 
 from globalpkg.log import logger
-
+from interface.geocoding import GeoCoding
+from interface.webtours import WebTours
+from interface.getweatherbycityname import GetWeatherByCityName
+from interface.ipquery import IPQuery
+from interface.pl import Pl
+from interface.sug import Sug
+from interface.baifubaocallback import BaiFuBaoCallback
+from interface.regeocoding import Regeocoding
+from interface.weatherwebservice import WeatherWebService
+from interface.submitwebsite import SubmitWebsite
 
 class CaseStep:
     def __init__(self, step_id, step_number, expected_result, action, testcase_id):

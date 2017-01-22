@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
+
+__author__ = 'shouke'
+
 import time
+
 from globalpkg.log import logger
 from globalpkg.mydb import MyDB
 from globalpkg.mytestlink import TestLink

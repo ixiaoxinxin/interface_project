@@ -1,18 +1,15 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-
-__author__ = 'shouke'
-
-import time
+from dominate.tags import td, tr, table, p
 import os
-
-from pyh import *
+#from pyh import *
 from globalpkg.log import logger
 from globalpkg.globalpy import testdb
 from globalpkg.globalpy import case_step_report_tb
 from globalpkg.globalpy import testcase_report_tb
 from globalpkg.globalpy import executed_history_id
 from globalpkg.globalpy import other_tools
+
 
 class HtmlReport:
     def __init__(self, title, head):
@@ -31,7 +28,7 @@ class HtmlReport:
     # 生成HTML报告
     def generate_html(self, file):
         page = PyH(self.title)
-        page << h1(self.head, align='center') # 标题居中
+        #page << h1(self.head, align='center') # 标题居中
 
         page << p('测试总耗时：' + self.time_took)
 

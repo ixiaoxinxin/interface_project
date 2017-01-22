@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-# @file: pyh.py
+# @file: pyh.python
 # @purpose: a HTML tag generator
 # @author: Emmanuel Turlay <turlay@cern.ch>
 
 __doc__ = """The pyh.py module is the core of the PyH package. PyH lets you
-generate HTML tags from within your python code.
+generate HTML tags from within your python code.code
 See http://code.google.com/p/pyh/ for documentation.
 """
 __author__ = "Emmanuel Turlay <turlay@cern.ch>"
@@ -117,7 +117,7 @@ def ValidW3C():
 class PyH(Tag):
     tagname = 'html'
 
-    def __init__(self, name='MyPyHPage'):
+    def __init__(self, name='MyPyHPage', head=None):
         self += head()
         self += body()
         self.attributes = dict(xmlns='http://www.w3.org/1999/xhtml', lang='en')
