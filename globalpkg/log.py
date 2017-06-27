@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 
-__author__ = 'shouke'
+__author__ = 'xiaoxinxin'
 import logging
 from logging.handlers import RotatingFileHandler
 import threading
